@@ -2,6 +2,8 @@
 
 基于 PySlurm 的 Prometheus Exporter SDK，可快速暴露 Slurm 作业、节点、分区等核心指标。
 
+![s](https://i.v2ex.co/F1Y5SZS0l.png)
+
 ## 安装
 
 ```bash
