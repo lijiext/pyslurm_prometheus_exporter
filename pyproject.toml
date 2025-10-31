@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyslurm-prometheus-exporter"
+version = "0.1.2"
+description = "基于PySlurm的Prometheus Exporter SDK"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "PySlurm Contributors" }]
+license = { text = "GPL-2.0-only" }
+dependencies = [
+    "pyslurm>=22.5.3",
+    "prometheus-client>=0.15.0",
+]
+keywords = ["Slurm", "HPC", "Prometheus", "Exporter"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+pyslurm-exporter = "slurm_prometheus_exporter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["slurm_prometheus_exporter"]
+
+[tool.setuptools.package-dir]
+"" = "src"
